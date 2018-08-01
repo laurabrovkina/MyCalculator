@@ -101,6 +101,7 @@ public class Calculator extends Activity implements View.OnClickListener {
                 calcString += " * ";
                 break;
             case R.id.btnC:
+                clearTapped();
                 break;
             case R.id.btn0:
                 numIsTapped(0);
@@ -159,6 +160,18 @@ private void numIsTapped(int tappedNum){
         }
 
         currentOperator = tappedOperator;
+
+    }
+
+    private void clearTapped(){
+
+        stringNumAtLeft = "";
+        stringNumAtRight = "";
+        calcResult = 0;
+        currentNum = "";
+        currentOperator = null;
+        txtResults.setText("0");
+        calcString = "0";
 
     }
 
