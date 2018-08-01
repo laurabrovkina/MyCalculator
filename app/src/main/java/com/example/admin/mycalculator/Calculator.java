@@ -123,9 +123,9 @@ private void numIsTapped(int tappedNum){
 }
 
     private void operatorIsTyped(OPERATOR tappedOperator){
-        if (currentOperator != null && currentNum != "") {
+        if (currentOperator != null) {
 
-            if (currentNum != null) {
+            if (currentNum != "") {
 
                 stringNumAtRight = currentNum;
                 currentNum = "";
